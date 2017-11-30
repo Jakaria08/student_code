@@ -40,8 +40,8 @@ struct shader
 	GLuint vertShaderHandle(glCreateShader(GL_VERTEX_SHADER)); 
 	GLuint fragShaderHandle(glCreateShader(GL_FRAGMENT_SHADER)); 
 	
-	char* vertShaderSource(readTxtFile("student_code/toon.vert"));
-	char* fragShaderSource(readTxtFile("student_code/toon.frag"));
+	char* vertShaderSource(readTxtFile(vertShaderFileName));
+	char* fragShaderSource(readTxtFile(fragShaderFileName));
 	
 	glShaderSource(vertShaderHandle, 1, (const char**) &vertShaderSource, NULL);
 	glShaderSource(fragShaderHandle, 1, (const char**) &fragShaderSource, NULL);
