@@ -37,8 +37,8 @@ struct shader
 
 		//*** Step 1: load and compile the vertex and fragment shaders ***//
 
-	GLuint vertShaderHandle(glCreateShader(GL_VERTEX_SHADER)); 
-	GLuint fragShaderHandle(glCreateShader(GL_FRAGMENT_SHADER)); 
+	vertShaderHandle = glCreateShader(GL_VERTEX_SHADER); 
+	fragShaderHandle = glCreateShader(GL_FRAGMENT_SHADER); 
 	
 	char* vertShaderSource(readTxtFile(vertShaderFileName));
 	char* fragShaderSource(readTxtFile(fragShaderFileName));
@@ -60,7 +60,7 @@ struct shader
 
 		//*** Step 2: link and install the shading program ***//
 	
-	GLuint programHandle(glCreateProgram()); 
+	programHandle = glCreateProgram(); 
 
 	glAttachShader(programHandle, vertShaderHandle);
 	glAttachShader(programHandle, fragShaderHandle);
