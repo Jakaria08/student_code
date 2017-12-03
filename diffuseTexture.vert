@@ -1,6 +1,7 @@
 
 // A super simple vertex shader that just mimics exactly what OpenGL's 
 // default fixed pipeline does
+// Lighting code taken and modified from the reference given in problem description
 
 void main() 
 {                
